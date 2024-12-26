@@ -1,1 +1,0 @@
-# FastAPI_Course-Sinerji
