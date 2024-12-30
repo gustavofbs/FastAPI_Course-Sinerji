@@ -1,13 +1,19 @@
-name: Test Workflow
-on: 
+name: pipeline
+on:
   push:
+    branches:
+    - main
+  pull_request:
+    branches:
+    - main
   workflow_dispatch:
 
 jobs:
-  example:
+  test: 
     runs-on: ubuntu-latest
+
     steps:
-      - name: Check out code
-        uses: actions/checkout@v3
-      - name: Print a test message
-        run: echo "Workflow is running!"
+      - name: Instalar o Python 3.12
+        uses: actions/setup-python@v5
+        with: 
+          python-version: '3.12'
