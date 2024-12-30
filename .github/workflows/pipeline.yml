@@ -22,4 +22,5 @@ jobs:
         run: poetry install
 
       - name: Executar testes
+        working-directory: fast_zero
         run: poetry run task test
